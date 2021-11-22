@@ -10,11 +10,12 @@ body {
 }
 
 /* start button style */
-.start-btn, .info-box, .quiz-box {
+.start-btn, .info-box, .quiz-box, .result-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-sha
 }
 
 .start-btn button {
@@ -32,7 +33,7 @@ body {
 
 /* info box styles */ /*display none hiding into page.. remove to continue*/
 .info-box {
-    display: none;
+   
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,7 +45,9 @@ body {
     width: 560px;
     background: white;
     border-radius: 5px;
-    
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale (0.9);
 }
 
 .info-box .info-title {
@@ -52,7 +55,7 @@ body {
     width: 100%;
     border-bottom: 1px solid rgb(21, 19, 19);
     display: flex;
-    padding: 0 85px;
+    padding: 0 30px;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -104,11 +107,19 @@ body {
     color:rgb(174, 16, 16);
 }
 
+.button button.quit:hover{
+    color: white;
+    background: rgb(242, 115, 115);
+}
+
+/*display none hiding into page.. remove to continue*/
 .quiz-box {
     width: 550px;
     background: white;
     border-radius: 5px;
-
+    /*opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale (0.9);*/
 }
 
 .quiz-box header {
@@ -264,4 +275,62 @@ footer .next-btn{
 
 footer .next-btn:hover{
     background: rgb(1, 192, 1);
+}
+
+.result-box {
+    background: White;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between; 
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);  
+}
+
+.result-box .icon{
+    font-size: 100px;
+    color: red;
+    margin-bottom: 10px;
+
+}
+
+.result-box .completed {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.result-box .score span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.score span p{
+    font-weight: 600;
+    padding: 0 4px;
+}
+
+.result-box .buttons{
+    display: flex;
+    margin: 20px 0;
+}
+
+.result-box .buttons button{
+    margin: 0 10px;
+    height: 40px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
