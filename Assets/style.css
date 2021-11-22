@@ -4,3 +4,103 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    background: rgb(174, 16, 16);
+}
+
+/* start button style */
+.start-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start-btn button {
+    font-size: 25px;
+    font-weight: 50%;
+    color:black;
+    padding: 16px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+
+/* info box styles */ /*display none hiding into page.. remove to continue*/
+.info-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.info-box {
+    width: 560px;
+    background: white;
+    border-radius: 5px;
+    
+}
+
+.info-box .info-title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid rgb(21, 19, 19);
+    display: flex;
+    padding: 0 85px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.info-box .info-rules {
+    padding: 15px 35px;
+    text-align: center;
+}
+
+.info-box .info-rules p {
+    margin: 10px 0;
+    font-size: 17px; 
+
+}
+
+.info-box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 3px solid rgb(21, 19, 19);
+}
+
+.info-box .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid rgb(174, 16, 16);
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.buttons button.restart{
+    color: white;
+    background:rgb(174, 16, 16);
+}
+
+.buttons button.restart:hover{
+    background:rgb(242, 115, 115);
+}
+
+.buttons button.quit{
+    color:rgb(174, 16, 16);
+}
+
